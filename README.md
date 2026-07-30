@@ -1,21 +1,21 @@
-# deep-research
+# my-skills
 
-A ZCode skill for structured, rigorous research deliverables.
+我的原创 ZCode 技能（skills）集合。每个子目录是一个独立的 skill。
 
-把"深度调研"沉淀成一个可复用的 skill：把一个难的研究问题拆解 → 并行派多个子agent独立调研 → 综合成 MD（强制数据诚实声明）→ 批判性审查（默认自检，高风险升级为独立对抗审查）→ 输出 MD + 设计精良的 HTML。
+目前包含：
+
+- **`deep-research/`** — 结构化深度调研 skill。把一个难的研究问题拆解 → 并行派多个子agent独立调研 → 综合成 MD（强制数据诚实声明）→ 批判性审查（默认自检，高风险升级为独立对抗审查）→ 输出 MD + 设计精良的 HTML。
 
 ## 安装
 
-把这个仓库 clone 到 ZCode 的个人技能目录：
+把整个仓库 clone 下来，然后把想要的 skill 文件夹复制/软链到 ZCode 的技能目录：
 
 ```bash
-git clone git@github.com:fahaowudi/research-skill.git ~/Desktop/research-skill
-# 然后把 deep-research 文件夹放到技能目录：
-# Windows: C:\Users\<你>\.zcode\skills\deep-research\
-# macOS/Linux: ~/.zcode/skills/deep-research/
+git clone git@github.com:fahaowudi/my-skills.git
+# 把需要的 skill（如 deep-research）放到技能目录：
+# Windows: C:\Users\<你>\.zcode\skills\<skill-name>\
+# macOS/Linux: ~/.zcode/skills/<skill-name>/
 ```
-
-或者直接把 `deep-research/` 整个文件夹复制到 `.zcode/skills/` 下即可。
 
 ## 结构
 
@@ -31,7 +31,9 @@ deep-research/
 
 在 ZCode 里对模型说"调研/研究/深度分析/对比分析/策略"等，且问题复杂到值得一份报告时，skill 会自动触发。也可以用 `/skill deep-research` 强制加载。
 
-## 流程概览
+---
+
+## deep-research 流程概览
 
 1. **对齐范围** — 用 AskUserQuestion 批量问边界/目的/深度/约束
 2. **并行调研** — 按复杂度派 2-5 个子agent（MECE 切分维度），各 prompt 自包含、互不见
